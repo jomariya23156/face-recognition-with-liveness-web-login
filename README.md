@@ -22,7 +22,7 @@
 <img src = "./assets/project_structure.png" width=446 height=702>  
 
 ## Files explanation
-In this section, we will show how to use/execute each file in this repo. The full workflow of the repo, from the data collection till running the web application, will be provided step-by-step in the next section.  
+&nbsp;&nbsp;&nbsp;&nbsp;In this section, we will show how to use/execute each file in this repo. The full workflow of the repo, from the data collection till running the web application, will be provided step-by-step in the next section.  
 *Note: All files have code explanation in the source code themselves*
 * In **main** folder (main repo)
   * **`app.py`**: This is the main Flask app. To use it, just normally run this file from your terminal/preferred IDE and the running port for your web app will be shown. **If you want to deploy this app, don't forget to change app.secret_key variable**
@@ -93,13 +93,12 @@ In this section, we will show how to use/execute each file in this repo. The ful
 **Note: Doing only these steps will allow only Liveness detection to work but not Recognition and Full login mechanism (for full workflow and training our own model, please keep reading and follow the next section)**
 
 ## Full Workflow usage and Training your own model
-**We'll start with face recognition**
+**We'll start with face recognition (step 1-5) and we'll do face liveness detection next (step 6-13). Finally, we'll combine everything together (step 14 til the end)**
 1. Create 1 folder for 1 person and name after the person's name in *face_recognition/dataset* (you can take a look at this folder in this repo for example)
 2. Collect the images showing full face (1 face per 1 image per 1 person). Since we are using **1 shot learning** technique, collect only up to 10 images for each person would be enough.
 3. Run `encode_faces.py` like the example above in files explanation section
 4. Now you should get encoded faces file ending with .pickle in the path you specify (if you follow the code above, you should see it in the same folder with this file)
 5. Run `recognize_faces.py` like the example above in files explanation section and see whether it works well.
-**Next we'll do face liveness detection**
 6. Collect video of yourself/others in many light condition (the easiest way to do this is to film yourself/others walking around your/others home) and save to *face_liveness_dection/videos* folder. *The length of the video depends on you.* You don't need to name it with the word 'real' or 'fake'. It's just convention that we found helpful when calling from other codes. **Take a look into that folder, we have dropped some example videos there.**
 7. Use those recorded videos and play it on your phone. Then, hold your phone and face the phone screen (running those recorded videos) to the webcam and record your PC/laptop screen. By doing this, you are creating the dataset of someone spoofing the person in the video / pretending to be the person in the video. Try to make sure this new spoofing video has the same length (or nearly) as the original one because we need to avoid *unbalanced dataset*. **Take a look into that folder, we have dropped some example videos there.**
 8. Run **`collect_dataset.py`** like the example above in files explanation section for every of your video. Make sure you save the output into the right folder (should be in `dataset` folder and in the right label folder `fake` or `real`). Now you must see a lot of images from your video in the output folder.
