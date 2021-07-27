@@ -114,7 +114,7 @@
 18. **IMPORTANT** After running `app.py` for the first time, go to those adding users to database section in **line 56** and so on that you add in step 15, and comment out all line that you added. The point of doing this is to not adding the same data to the database table which can cause error. (SQL term: the primary key which is username must be unique)
 19. Congratulations! You've done everything :D
 
-## Hope you find our project exciting and useful much or less :D
+## Hope you find our project exciting and useful more or less :D
 
 ## Problems we've found
 All login mechanism work properly, but sometimes OpenCV camera doesn't show up when calling a function from app.py or when logging in. But restarting app.py once or twice always solves the problem.
