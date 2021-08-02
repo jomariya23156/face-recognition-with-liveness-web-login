@@ -1,6 +1,6 @@
 import os
-# delete this line if you want to run your tensorflow model on GPU
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+# uncomment this line if you want to run your tensorflow model on CPU
+# os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 from imutils.video import VideoStream
 import face_recognition

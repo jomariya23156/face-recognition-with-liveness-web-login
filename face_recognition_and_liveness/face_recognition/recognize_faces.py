@@ -10,8 +10,6 @@ import imutils
 parser = argparse.ArgumentParser()
 parser.add_argument('-e', '--encodings', required=True,
                     help='Path to saved face encodings')
-parser.add_argument("-y", "--display", type=int, default=1,
-                    help="whether or not to display output frame to screen")
 parser.add_argument('-d', '--detection-method', type=str, default='cnn',
                     help="face detection model to use: 'hog' or 'cnn'")
 args = vars(parser.parse_args())
@@ -20,10 +18,7 @@ args = vars(parser.parse_args())
 print('[INFO] loading encodings...')
 with open(args['encodings'], 'rb') as file:
     data = pickle.loads(file.read())
-    
-# load the input image and converts it from BGR to RGB
-# image = cv2.imread(args['image'])
-# rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
 print('[INFO] starting video stream...')
 vs = VideoStream(0).start()
 time.sleep(2)

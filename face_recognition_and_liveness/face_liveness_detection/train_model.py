@@ -23,7 +23,7 @@ parser.add_argument('-d', '--dataset', required=True,
 parser.add_argument('-m', '--model', type=str, required=True,
                     help='Path to output trained model')
 parser.add_argument('-l', '--le', type=str, required=True,
-                    help='Path to Label Encoder')
+                    help='Path to output Label Encoder')
 parser.add_argument('-p', '--plot', type=str, default='plot.png',
                     help='Path to output loss/accuracy plot')
 args = vars(parser.parse_args())
