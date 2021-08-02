@@ -1,19 +1,19 @@
 # Face Recognition with Liveness Detection Login on Flask Web application
 ## Project Overview
-&nbsp;&nbsp;&nbsp;&nbsp;We have implemented Flask web application login page including face verification (1-to-1 to verify whether the person who is logging in is really that person) for security purpose with liveness detection mechanism (to check whether the person detected on the camera is a REAL person or FAKE (eg. image, video, etc. of that person)) for Anti-Spoofting (Others pretending to be the person) built with Convolutional Neural Network.  
+&nbsp;&nbsp;&nbsp;&nbsp;We have implemented Flask web application login page including face verification (1-to-1 to verify whether the person who is logging in is really that person), for security purpose, with liveness detection mechanism (to check whether the person detected on the camera is a REAL person or FAKE (eg. image, video, etc. of that person)), for Anti-Spoofting (Others pretending to be the person), built with Convolutional Neural Network.  
   
 **Login component:**  
 <img src="./assets/example.jpg" width=374 height=521>  
   
-**Loggin in and running inference process:**
-./assets/Demo_Trim.mp4
+**Loggin in and running inference process:**  
+<img src="./assets/short_demo.gif">
 
-**Link to full demo on Youtube:** https://www.youtube.com/watch?v=2S-HmiPNViU 
+**Link to full demo on Youtube (recommend watching):** https://www.youtube.com/watch?v=2S-HmiPNViU 
 
 ## Result
 * The face recognition works well detecting face and accurately recognizing the face.
 * The liveness detection works well with classifying fake images and videos from smartphone spoofing.
-* The liveness detection is also trained to be able to classify solid-printed images (image on papers and cards). But it's trained only with around 10 images, so it doesn't work well everytime (read "Training model with your own dataset" section, in case you want to train it yourself with bigger dataset)
+* The liveness detection is also trained to be able to classify solid-printed images (image on papers and cards). But it's trained only with around 10 images, so it doesn't work well everytime (read "Full Workflow usage and Training your own model" section, in case you want to train it yourself with bigger dataset)
 
 ## Packages and Tools
 Use requirements.txt if you want to install the correct version of packages.
@@ -124,7 +124,20 @@ Use requirements.txt if you want to install the correct version of packages.
 
 ## Hope you find our project exciting and useful more or less :D
 
+## What can be improved
+- Collect more data in many light conditions and from different genders/ethnics to improve the model (it turned out light intensity and condition play a big role here)
+- Connect this login web template to the real app.
+- Implement more login mechanism
+
 ## Problems we've found
 All login mechanism work properly, but sometimes OpenCV camera doesn't show up when calling a function from app.py or when logging in. But restarting app.py once or twice always solves the problem.
 
+## Amazing resources I have learned from
+- https://www.pyimagesearch.com/2018/06/18/face-recognition-with-opencv-python-and-deep-learning/
+- https://www.pyimagesearch.com/2019/03/11/liveness-detection-with-opencv/
+- https://www.youtube.com/watch?v=2Zz97NVbH0U&t=790s  
+  
+**image in the log in page:** https://www.welivesecurity.com/wp-content/uploads/2019/12/face-scanning-1-e1575541339743.jpg?h=660&la=en&w=1170
+
 # Thank you for reading til the end. YOU ARE AMAZING!!! :D
+<img src="./static/photos/python_java_meme.gif">
