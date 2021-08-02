@@ -1,7 +1,14 @@
-# (a live demo video is coming soon!)
 # Face Recognition with Liveness Detection Login on Flask Web application
 ## Project Overview
-&nbsp;&nbsp;&nbsp;&nbsp;We have implemented Flask web application login page including face verification (1-to-1 to verify whether the person who is logging in is really that person) for security purpose with liveness detection mechanism (to check whether the person detected on the camera is a REAL person or FAKE (eg. image, video, etc. of that person)) for Anti-Spoofting (Others pretending to be the person) built with Convolutional Neural Network.
+&nbsp;&nbsp;&nbsp;&nbsp;We have implemented Flask web application login page including face verification (1-to-1 to verify whether the person who is logging in is really that person) for security purpose with liveness detection mechanism (to check whether the person detected on the camera is a REAL person or FAKE (eg. image, video, etc. of that person)) for Anti-Spoofting (Others pretending to be the person) built with Convolutional Neural Network.  
+  
+**Login component:**  
+<img src="./assets/example.jpg" width=374 height=521>  
+  
+**Loggin in and running inference process:**
+./assets/Demo_Trim.mp4
+
+**Link to full demo on Youtube:** https://www.youtube.com/watch?v=2S-HmiPNViU 
 
 ## Result
 * The face recognition works well detecting face and accurately recognizing the face.
@@ -9,6 +16,7 @@
 * The liveness detection is also trained to be able to classify solid-printed images (image on papers and cards). But it's trained only with around 10 images, so it doesn't work well everytime (read "Training model with your own dataset" section, in case you want to train it yourself with bigger dataset)
 
 ## Packages and Tools
+Use requirements.txt if you want to install the correct version of packages.
 - OpenCV
 - TensorFlow 2
 - Scikit-learn
