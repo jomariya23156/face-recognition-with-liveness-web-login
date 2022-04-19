@@ -10,6 +10,8 @@
 
 **Link to full demo on Youtube (recommend watching):** https://www.youtube.com/watch?v=2S-HmiPNViU 
 
+## Related repos
+* [@birdowl21](https://github.com/birdowl21)'s repo extends this project to make it work with WebRTC. Be sure to check it out, if you're interested: https://github.com/birdowl21/Face-Liveness-Detection-Anti-Spoofing-Web-App
 ## Result
 * The face recognition works well detecting face and accurately recognizing the face.
 * The liveness detection works well with classifying fake images and videos from smartphone spoofing.
