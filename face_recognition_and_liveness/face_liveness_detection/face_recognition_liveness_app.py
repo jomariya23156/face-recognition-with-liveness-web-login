@@ -56,6 +56,11 @@ def recognition_liveness(model_path, le_path, detector_folder, encodings, confid
     # you can delete this if you want
     sequence_count = 0 
     
+    # initialize variables needed to return
+    # in case, users press 'q' before the program process the frame
+    name = 'Unknown'
+    label_name = 'fake'
+    
     # iterate over the frames from the video stream
     while True:
         # grab the frame from the threaded video stream
