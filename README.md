@@ -18,7 +18,7 @@
 * The liveness detection is also trained to be able to classify solid-printed images (image on papers and cards). But it's trained only with around 10 images, so it doesn't work well everytime (read "Full Workflow usage and Training your own model" section, in case you want to train it yourself with bigger dataset)
 
 ## Packages and Tools
-Checkout requirements.txt for the correct version of packages.
+Check out requirements.txt for the correct version of packages.
 - Python 3.9.5
 - OpenCV
 - TensorFlow 2.5
