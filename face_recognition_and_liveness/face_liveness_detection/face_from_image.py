@@ -11,7 +11,7 @@ parser.add_argument('-o', '--output', type=str, required=True,
                     help='Path to output directory of cropped face')
 parser.add_argument('-d', '--detector', type=str, required=True,
                     help='Path to OpenCV\'s face detector')
-parser.add_argument('-c', '--confidence', type=int, default=0.5,
+parser.add_argument('-c', '--confidence', type=float, default=0.5,
                     help='Confidence of face detection')
 args = vars(parser.parse_args())
 
