@@ -99,8 +99,9 @@ Check out requirements.txt for the correct version of packages.
 
 ## Basic usage
 1. Download/Clone this repo
-2. Run app.py
-3. That's it!  
+2. Install the packages in `requirements.txt`
+3. Run `app.py`
+4. That's it!  
   
 **Note: Doing only these steps will allow only Liveness detection to work but not Recognition and Full login mechanism (for full workflow and training our own model, please keep reading and follow the next section)**
 
